@@ -3,7 +3,9 @@
 @include('head')
 @include('header')
     <body>
-        <div class="main-div">
+    <div class="goodstatus">{{$goodstatus}}</div>
+    <div class="badstatus">{{$badstatus}}</div>
+        <div class="main-div">  
         <form method="POST">
             @csrf
             Name: <input type="text" name="name" value="{{ $name }}"><div style="color:red;">{{$nameerror}}</div><br>

@@ -12,7 +12,7 @@ class PollController extends Controller
 {
     //
     public function getPoll():View{
-        return view('poll',["name"=>"","email"=>"",'favoriteanimal'=>'','favoritefood'=>'','nameerror'=>'','emailerror'=>'','favanimerror'=>'','favfooderror'=>'']);
+        return view('poll',["name"=>"","email"=>"",'favoriteanimal'=>'','favoritefood'=>'','nameerror'=>'','emailerror'=>'','favanimerror'=>'','favfooderror'=>'','goodstatus'=>"",'badstatus'=>'']);
     }
     public function getResults():View{
         return view('results');
@@ -60,11 +60,11 @@ class PollController extends Controller
             $errors+=1;
         }
         if ($errors>0){
-            return view('poll',["name"=>$name,"email"=>$email,'favoriteanimal'=>$favanim,'favoritefood'=>$favfood,'nameerror'=>$nameerror,'emailerror'=>$emailerror,'favanimerror'=>$favanimerror,'favfooderror'=>$favfooderror]);
+            return view('poll',["name"=>$name,"email"=>$email,'favoriteanimal'=>$favanim,'favoritefood'=>$favfood,'nameerror'=>$nameerror,'emailerror'=>$emailerror,'favanimerror'=>$favanimerror,'favfooderror'=>$favfooderror,'goodstatus'=>"",'badstatus'=>'Ошибка!']);
         }
         $data=["name"=>$name,"email"=>$email,"favoriteanimal"=>$favanim,"favoritefood"=>$favfood];
         $filename=md5($name.$email.$favanim.$favfood).".json";
         Storage::disk('public')->put($filename, json_encode($data,JSON_UNESCAPED_UNICODE));
-        return view('poll',["name"=>"","email"=>"",'favoriteanimal'=>'','favoritefood'=>'','nameerror'=>'','emailerror'=>'','favanimerror'=>'','favfooderror'=>'']);
+        return view('poll',["name"=>"","email"=>"",'favoriteanimal'=>'','favoritefood'=>'','nameerror'=>'','emailerror'=>'','favanimerror'=>'','favfooderror'=>'','goodstatus'=>"Данные добавлены успешно!",'badstatus'=>'']);
     }
 }

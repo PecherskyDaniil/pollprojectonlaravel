@@ -46,3 +46,17 @@ footer{
     margin:0px;
     border:1px solid black;
 }
+.goodstatus{
+    width:100%;
+    font-size: 40px;
+    text-align: center;
+    height: fit-content;
+    background-color: rgb(90, 223, 90);
+}
+.badstatus{
+    width:100%;
+    font-size: 40px;
+    text-align: center;
+    height: fit-content;
+    background-color: rgb(238, 126, 126);
+}
