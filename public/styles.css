@@ -1,0 +1,48 @@
+body{
+    padding:0px;
+    margin:0px;
+}
+
+header{
+    width:100%;
+    border:1px solid black;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 10px black;
+}
+footer{
+    width:100%;
+}
+.main-div{
+    font-size: 20px;
+    width:fit-content;
+    min-height: 90vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+table{
+    border:1px solid black;
+    border-collapse: collapse;
+}
+td{
+    font-size: 20px;
+    border:1px solid black;
+    padding: 1px;
+}
+.table-header{
+    background-color: rgb(138, 194, 244);
+}
+.logo{
+    display:inline-block;
+    height:50px;
+    width:50px;
+}
+header h1{
+    display:inline-block;
+    padding: 10px;
+}
+footer{
+    width:100%;
+    padding: 30px;
+    margin:0px;
+    border:1px solid black;
+}
