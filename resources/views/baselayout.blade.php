@@ -15,8 +15,7 @@
         <a href="/results">results</a>
         <a href="/hello/">hello</a>
     </header>
-    @section('content')
-    @show
+    @yield('content')
     <footer style="margin-top: 20px;"> 
         <div>Just an info </div>
     </footer>

@@ -1,5 +1,5 @@
 @extends('statuslayout')
-        @section('form')
+    @section('status')
         <div class="main-div">  
         <form method="POST">
             @csrf
@@ -10,4 +10,4 @@
             <input type="submit">
         </form>
         </div>
-        @endsection
+    @endsection
