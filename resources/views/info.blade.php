@@ -1,11 +1,6 @@
-
-<html>
-@include('head')
-@include('header')
-    <body>
+@extends('baselayout')
+@section('content')
         <div class="main-div" >
             Info about this site
         </div>
-    </body>
-    @include('footer')
-</html>
+@endsection

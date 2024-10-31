@@ -1,9 +1,7 @@
-
-<html>
-@include('head')
-@include('header')
-    <body>
+ @extends('baselayout')
+    @section('content')
         <div class="main-div">
+            
         <table>
             <tr class='table-header'><td>Name</td> <td>Email</td> <td>Favorite animal</td> <td>Favorite food</td></tr>
         <?php
@@ -21,6 +19,4 @@
         ?>
         </table>
         </div>
-    </body>
-    @include('footer')
-</html>
+        @endsection

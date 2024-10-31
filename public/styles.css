@@ -60,3 +60,10 @@ footer{
     height: fit-content;
     background-color: rgb(238, 126, 126);
 }
+header .sitename{
+    margin-right: 100px;
+}
+header a{
+    margin-left: 20px;
+    margin-right: 20px;
+}

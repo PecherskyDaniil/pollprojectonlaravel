@@ -1,10 +1,5 @@
-
-<html>
-@include('head')
-@include('header')
-    <body>
-    <div class="goodstatus">{{$goodstatus}}</div>
-    <div class="badstatus">{{$badstatus}}</div>
+@extends('statuslayout')
+        @section('form')
         <div class="main-div">  
         <form method="POST">
             @csrf
@@ -15,6 +10,4 @@
             <input type="submit">
         </form>
         </div>
-    </body>
-    @include('footer')
-</html>
+        @endsection

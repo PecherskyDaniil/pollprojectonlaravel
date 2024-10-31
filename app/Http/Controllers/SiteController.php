@@ -11,4 +11,7 @@ class SiteController extends Controller
     public function hello($name):View{
         return view('greeting', ['name' => $name]);
     }
+    public function helloempty():View{
+        return view('greeting', ['name' => "somebody"]);
+    }
 }
