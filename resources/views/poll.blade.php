@@ -18,6 +18,10 @@
             @error('favoritefood')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror<br>
+            Your secret: <input type="textarea" name="secret" value="{{ old('secret') }}">
+            @error('secret')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror<br>
             <input type="submit">
         </form>
         </div>

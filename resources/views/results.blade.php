@@ -1,22 +1,21 @@
  @extends('baselayout')
     @section('content')
         <div class="main-div">
-            
+        <form action="" method="POST">   
+        @csrf
         <table>
-            <tr class='table-header'><td>Name</td> <td>Email</td> <td>Favorite animal</td> <td>Favorite food</td></tr>
-        <?php
-        $filepath='../storage/app/public/';
-        $files = scandir($filepath);
-        foreach($files as $file) {
-            if($file == '.' || $file == '..' || $file == '.gitignore') continue;
-            $data=json_decode(file_get_contents($filepath .$file),true);
-            echo '<tr>';
-            foreach($data as $cell){
-                echo '<td>' . $cell . '</td>';
-            }
-            echo '</tr>';
-        }
-        ?>
+        <thead><tr class='table-header'><td>ID</td><td>Name</td> <td>Email</td> <td>Favorite animal</td> <td>Favorite food</td><td>Secret</td><td>Delete</td></tr></thead>
+            @foreach ($appforms as $appform)
+            <tr>
+                <td>{{$appform->id}}</td>
+                <td>{{$appform->name}}</td>
+                <td>{{$appform->email}}</td>
+                <td>{{$appform->favorite_food}}</td>
+                <td>{{$appform->favorite_animal}}</td>
+                <td>{{$appform->secret}}</td>
+                <td><button name="delete" value="{{$appform->id}}">-</button>
+            <tr>
+            @endforeach
         </table>
         </div>
         @endsection
