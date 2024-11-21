@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+use App\Models\Scopes\AncientScope;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -13,5 +14,9 @@ class AppForm extends Model
         return [
             'secret' => 'hashed',
         ];
+    }
+    protected static function booted(): void
+    {
+        static::addGlobalScope(new AncientScope);
     }
 }

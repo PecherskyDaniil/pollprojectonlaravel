@@ -17,7 +17,6 @@ Route::get('/poll',[PollController::class, 'getPoll']);
 Route::post('/poll',[PollController::class, 'postPoll']);
 Route::post('/results',[PollController::class, 'deleteAppForm']);
 Route::get('/results',[PollController::class, 'getResults']);
-
 Route::get('/client/{id}', function (string $id) {
     return new ClientResource(Client::findOrFail($id));
 });
